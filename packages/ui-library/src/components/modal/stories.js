@@ -94,7 +94,7 @@ export const Factory = {
 
 export const WithPanel = {
 	component: Factory.component.bind( {} ),
-	storyName: "With panel",
+	name: "With panel",
 	parameters: {
 		docs: {
 			description: {
@@ -118,7 +118,7 @@ export const WithPanel = {
 
 export const WithTitleAndDescription = {
 	component: Factory.component.bind( {} ),
-	storyName: "With title and description",
+	name: "With title and description",
 	parameters: {
 		docs: {
 			description: {
@@ -161,5 +161,5 @@ const InitialFocusComponent = () => {
 };
 
 export const InitialFocus = () => <InitialFocusComponent />;
-InitialFocus.storyName = "Initial focus";
+InitialFocus.name = "Initial focus";
 InitialFocus.parameters = { docs: { description: { story: "The `initialFocus` prop accepts ref object and once the modal is open, the focus will be applied to the element with the ref. <br>By default, the focus will go to the first focusable element in the modal." } } };

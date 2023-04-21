@@ -69,13 +69,13 @@ OptionsProp.args = {
 		{ value: "4", label: "Option 4" },
 	],
 };
-OptionsProp.storyName = "Options prop";
+OptionsProp.name = "Options prop";
 OptionsProp.parameters = {
 	docs: { description: { story: "Add options as an array of objects with `options` prop. Each object must contain `value` and `label` parameters. The displayed selected label will be updated automatically on change." } },
 };
 
 export const ChildrenProp = Template.bind( {} );
-ChildrenProp.storyName = "Children prop";
+ChildrenProp.name = "Children prop";
 ChildrenProp.args = {
 	id: "select-field-5",
 	name: "name-5",

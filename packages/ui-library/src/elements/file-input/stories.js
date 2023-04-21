@@ -37,7 +37,7 @@ Factory.args = {
 
 export const WithDescription = Template.bind( {} );
 
-WithDescription.storyName = "With description";
+WithDescription.name = "With description";
 
 WithDescription.parameters = {
 	controls: { disable: false },
@@ -66,7 +66,7 @@ Disabled.args = {
 };
 
 export const DifferentIcon = Template.bind( {} );
-DifferentIcon.storyName = "Different icon";
+DifferentIcon.name = "Different icon";
 DifferentIcon.parameters = {
 	controls: { disable: false },
 	docs: { description: { story: "A file input with different icon using `iconAs` prop. The icon should be a React component." } },

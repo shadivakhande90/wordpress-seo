@@ -75,7 +75,7 @@ Factory.args = {
 
 export const WithLabel = Template.bind( {} );
 
-WithLabel.storyName = "With label";
+WithLabel.name = "With label";
 
 WithLabel.parameters = {
 	controls: { disable: false },
@@ -90,7 +90,7 @@ WithLabel.args = {
 
 export const WithPlaceholder = Template.bind( {} );
 
-WithPlaceholder.storyName = "With placeholder";
+WithPlaceholder.name = "With placeholder";
 
 WithPlaceholder.parameters = {
 	controls: { disable: false },
@@ -105,7 +105,7 @@ WithPlaceholder.args = {
 
 export const WithSelectedLabel = Template.bind( {} );
 
-WithSelectedLabel.storyName = "With selected label";
+WithSelectedLabel.name = "With selected label";
 
 WithSelectedLabel.parameters = {
 	controls: { disable: false },

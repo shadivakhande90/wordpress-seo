@@ -40,7 +40,7 @@ export const Factory = {
 };
 
 export const WithLabelAndDescription = {
-	storyName: "With label and description",
+	name: "With label and description",
 	component: Factory.component.bind( {} ),
 	args: {
 		id: "input-field-1",

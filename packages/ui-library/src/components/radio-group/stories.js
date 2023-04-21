@@ -83,7 +83,7 @@ Variants.parameters = {
 };
 
 export const WithLabelAndDescription = Template.bind();
-WithLabelAndDescription.storyName = "With label and description";
+WithLabelAndDescription.name = "With label and description";
 WithLabelAndDescription.args = {
 	id: "radio-group-3",
 	name: "name-3",
@@ -98,7 +98,7 @@ WithLabelAndDescription.args = {
 };
 
 export const WithValue = Template.bind();
-WithValue.storyName = "With value";
+WithValue.name = "With value";
 WithValue.args = {
 	id: "radio-group-4",
 	name: "name-4",
@@ -113,7 +113,7 @@ WithValue.args = {
 };
 
 export const ChildrenProp = Template.bind();
-ChildrenProp.storyName = "Children prop";
+ChildrenProp.name = "Children prop";
 ChildrenProp.args = {
 	id: "radio-group-5",
 	name: "name-5",

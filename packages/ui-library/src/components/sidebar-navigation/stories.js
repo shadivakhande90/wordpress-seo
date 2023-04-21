@@ -120,7 +120,7 @@ Factory.args = {
 };
 
 export const MenuItem = Template.bind( {} );
-MenuItem.storyName = "Menu item";
+MenuItem.name = "Menu item";
 MenuItem.parameters = { docs: { description: { story: "The subcomponent `SidebarNavigation.MenuItem` accepts the subcomponents `SidebarNavigation.SubmenuItem` as children." } } };
 
 MenuItem.args = {
@@ -200,7 +200,7 @@ Mobile.args = {
 
 
 export const NavigationContext = Template.bind( {} );
-NavigationContext.storyName = "Navigation context";
+NavigationContext.name = "Navigation context";
 NavigationContext.parameters = {
 	docs: {
 		description: {

@@ -94,4 +94,4 @@ export const CustomComponent = {
 	},
 };
 
-CustomComponent.storyName = "Custom component";
+CustomComponent.name = "Custom component";

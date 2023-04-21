@@ -36,5 +36,5 @@ export const DangerousLabel = ( args ) => (
 		<StoryComponent id="radio-dangerous" name="option-dangerous" value="D" label={ "&bull; Dangerous label." } isLabelDangerousHtml={ true } />
 	</div>
 );
-DangerousLabel.storyName = "Dangerous label";
+DangerousLabel.name = "Dangerous label";
 DangerousLabel.parameters = { docs: { description: { story: dangerousLabel } } };

@@ -56,7 +56,7 @@ Factory.args = {
 };
 
 export const TableHead = Template.bind( {} );
-TableHead.storyName = "Table head";
+TableHead.name = "Table head";
 
 TableHead.parameters = {
 	controls: { disable: false },
@@ -90,7 +90,7 @@ TableHead.args = {
 };
 
 export const TableRow = Template.bind( {} );
-TableRow.storyName = "Table row";
+TableRow.name = "Table row";
 
 TableRow.parameters = {
 	controls: { disable: false },
@@ -124,7 +124,7 @@ TableRow.args = {
 };
 
 export const TableHeader = Template.bind( {} );
-TableHeader.storyName = "Table header";
+TableHeader.name = "Table header";
 
 TableHeader.parameters = {
 	controls: { disable: false },
@@ -158,7 +158,7 @@ TableHeader.args = {
 };
 
 export const TableBody = Template.bind( {} );
-TableBody.storyName = "Table body";
+TableBody.name = "Table body";
 
 TableBody.parameters = {
 	controls: { disable: false },
@@ -192,7 +192,7 @@ TableBody.args = {
 };
 
 export const TableCell = Template.bind( {} );
-TableCell.storyName = "Table cell";
+TableCell.name = "Table cell";
 
 TableCell.parameters = {
 	controls: { disable: false },

@@ -44,7 +44,7 @@ Factory.parameters = {
 };
 
 export const WithLabelAndDescription = Template.bind( {} );
-WithLabelAndDescription.storyName = "With label and description";
+WithLabelAndDescription.name = "With label and description";
 WithLabelAndDescription.args = {
 	id: "tag-field-1",
 	label: "Tag field with a label",

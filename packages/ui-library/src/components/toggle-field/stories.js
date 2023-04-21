@@ -39,7 +39,7 @@ Factory.args = {
 };
 
 export const WithLabelAndDescription = Template.bind( {} );
-WithLabelAndDescription.storyName = "With label and description";
+WithLabelAndDescription.name = "With label and description";
 WithLabelAndDescription.args = {
 	id: "id-1",
 	name: "name-1",
@@ -56,7 +56,7 @@ Checked.args = {
 };
 
 export const WithLabelSuffix = Template.bind( {} );
-WithLabelSuffix.storyName = "With label suffix";
+WithLabelSuffix.name = "With label suffix";
 WithLabelSuffix.args = {
 	id: "id-3",
 	name: "name-3",

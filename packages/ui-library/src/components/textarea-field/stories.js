@@ -31,7 +31,7 @@ export const Factory = {
 
 export const WithLabelAndDescription = {
 	component: Factory.component.bind( {} ),
-	storyName: "With label and description",
+	name: "With label and description",
 	args: {
 		id: "textarea-field-1",
 		label: "Textarea field with a label",

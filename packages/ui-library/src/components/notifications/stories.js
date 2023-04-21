@@ -92,7 +92,7 @@ Error.args = {
 };
 
 export const DescriptionList = Template.bind( {} );
-DescriptionList.storyName = "Description list";
+DescriptionList.name = "Description list";
 DescriptionList.args = {
 	variant: "info",
 	id: "notification-info",
@@ -102,7 +102,7 @@ DescriptionList.args = {
 DescriptionList.parameters = { docs: { description: { story: "Description can be an array of strings." } } };
 
 export const ChildrenNotification = Template.bind( {} );
-ChildrenNotification.storyName = "Children notification";
+ChildrenNotification.name = "Children notification";
 const DescriptionChild = () => <b>Notification description as a component.</b>;
 
 ChildrenNotification.args = {
