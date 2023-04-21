@@ -21,7 +21,9 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/sassdash"
+      "**/sassdash",
+      "**/@storybook/**",
+      "**/storybook"
     ]
   },
   "scripts": {
