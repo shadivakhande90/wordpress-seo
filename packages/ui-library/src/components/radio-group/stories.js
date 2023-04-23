@@ -1,4 +1,4 @@
-import { useState, useCallback } from "@wordpress/element";
+import { useState, useCallback } from "react";
 import { noop } from "lodash";
 
 import RadioGroup from ".";

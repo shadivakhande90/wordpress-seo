@@ -1,5 +1,5 @@
 import { StoryComponent } from ".";
-import { useCallback, useState } from "@wordpress/element";
+import { useCallback, useState } from "react";
 
 export default {
 	title: "1) Elements/Tag input",

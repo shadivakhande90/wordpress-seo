@@ -1,4 +1,4 @@
-import { useCallback } from "@wordpress/element";
+import { useCallback } from "react";
 import { map, range } from "lodash";
 import ChildrenLimiter from ".";
 import { Button } from "../../";

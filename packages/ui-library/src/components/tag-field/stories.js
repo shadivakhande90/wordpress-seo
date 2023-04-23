@@ -1,4 +1,4 @@
-import { useCallback, useState } from "@wordpress/element";
+import { useCallback, useState } from "react";
 import { noop, map } from "lodash";
 import { VALIDATION_VARIANTS } from "../../constants";
 import { StoryComponent } from ".";

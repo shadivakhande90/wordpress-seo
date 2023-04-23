@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useState, useRef } from "@wordpress/element";
+import { Fragment, useCallback, useState, useRef } from "react";
 import { noop } from "lodash";
 import PropTypes from "prop-types";
 import RawModal, { classNameMap } from ".";

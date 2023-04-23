@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
 import classNames from "classnames";
-import { forwardRef } from "@wordpress/element";
+import { forwardRef } from "react";
 
 /**
  * @param {string} as The element to render as.

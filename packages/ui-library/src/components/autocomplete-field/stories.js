@@ -1,5 +1,5 @@
 import AutocompleteField, { StoryComponent } from ".";
-import { useCallback, useMemo, useState } from "@wordpress/element";
+import { useCallback, useMemo, useState } from "react";
 import { filter, find, includes, toLower, noop, map } from "lodash";
 import { VALIDATION_VARIANTS } from "../../constants";
 
