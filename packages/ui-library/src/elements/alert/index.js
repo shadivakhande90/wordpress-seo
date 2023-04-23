@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { ValidationIcon, ValidationMessage } from "../validation";
 import { forwardRef } from "react";
+import { ValidationIcon, ValidationMessage } from "../validation";
 
-export const classNameMap = {
+const classNameMap = {
 	variant: {
 		info: "yst-alert--info",
 		warning: "yst-alert--warning",
@@ -12,7 +12,7 @@ export const classNameMap = {
 	},
 };
 
-export const roleMap = {
+const roleMap = {
 	alert: "alert",
 	status: "status",
 };
@@ -50,16 +50,14 @@ const Alert = forwardRef( ( {
 	</Component>
 ) );
 
-const propTypes = {
+Alert.displayName = "Alert";
+Alert.propTypes = {
 	children: PropTypes.node.isRequired,
 	as: PropTypes.elementType,
 	variant: PropTypes.oneOf( Object.keys( classNameMap.variant ) ),
 	className: PropTypes.string,
 	role: PropTypes.oneOf( Object.keys( roleMap ) ),
 };
-
-Alert.propTypes = propTypes;
-
 Alert.defaultProps = {
 	as: "span",
 	variant: "info",
@@ -68,11 +66,3 @@ Alert.defaultProps = {
 };
 
 export default Alert;
-
-// eslint-disable-next-line require-jsdoc
-export const StoryComponent = props => <Alert { ...props } />;
-// eslint-disable-next-line react/forbid-foreign-prop-types
-StoryComponent.propTypes = Alert.propTypes;
-// eslint-disable-next-line react/no-typos
-StoryComponent.DefaultProps = Alert.defaultProps;
-StoryComponent.displayName = "Alert";
