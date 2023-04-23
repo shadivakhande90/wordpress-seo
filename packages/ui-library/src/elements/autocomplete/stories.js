@@ -1,11 +1,11 @@
+import { filter, find, includes, map, noop, toLower } from "lodash";
 import { useCallback, useMemo, useState } from "react";
-import { filter, find, includes, toLower, noop, map } from "lodash";
-import Autocomplete, { StoryComponent } from ".";
+import Autocomplete from ".";
 import { VALIDATION_VARIANTS } from "../../constants";
 
 export default {
 	title: "1) Elements/Autocomplete",
-	component: StoryComponent,
+	component: Autocomplete,
 	argTypes: {
 		children: { control: "text" },
 		labelSuffix: { control: "text" },
@@ -46,7 +46,7 @@ const Template = ( args ) => {
 	return (
 		// Min height to make room for options dropdown.
 		<div style={ { minHeight: 200 } }>
-			<StoryComponent
+			<Autocomplete
 				selectedLabel={ selectedOption?.label || "" }
 				{ ...args }
 				value={ value }
@@ -58,7 +58,7 @@ const Template = ( args ) => {
 						{ option.label }
 					</Autocomplete.Option>
 				) ) }
-			</StoryComponent>
+			</Autocomplete>
 		</div>
 	);
 };
@@ -121,7 +121,7 @@ WithSelectedLabel.args = {
 export const Validation = () => (
 	<div className="yst-space-y-8">
 		{ map( VALIDATION_VARIANTS, variant => (
-			<StoryComponent
+			<Autocomplete
 				key={ variant }
 				id={ `validation-${ variant }` }
 				name={ `validation-${ variant }` }
