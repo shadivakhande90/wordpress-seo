@@ -11,6 +11,7 @@ const CLASSNAME_MAP = {
 		warning: "yst-validation-icon--warning",
 		info: "yst-validation-icon--info",
 		error: "yst-validation-icon--error",
+		question: "yst-validation-icon--question",
 	},
 };
 
