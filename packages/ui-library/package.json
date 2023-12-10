@@ -46,6 +46,7 @@
     "@storybook/addons": "^7.6.10",
     "@storybook/mdx2-csf": "^1.1.0",
     "@storybook/react": "^7.6.10",
+    "@storybook/react-webpack5": "^7.6.10",
     "@storybook/theming": "^7.6.10",
     "@tailwindcss/forms": "^0.5.3",
     "@wordpress/jest-preset-default": "^8.0.1",
