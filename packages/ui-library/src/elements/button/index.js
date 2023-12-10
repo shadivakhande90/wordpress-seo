@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import { keys } from "lodash";
 import PropTypes from "prop-types";
+import React, { forwardRef } from "react";
 import Spinner from "../spinner";
-import { forwardRef } from "@wordpress/element";
 
 export const classNameMap = {
 	variant: {
@@ -72,8 +72,8 @@ const propTypes = {
 	className: PropTypes.string,
 };
 
+Button.displayName = "Button";
 Button.propTypes = propTypes;
-
 Button.defaultProps = {
 	as: "button",
 	// eslint-disable-next-line no-undefined
