@@ -13,18 +13,16 @@ export default {
 	parameters: { docs: { description: { component } } },
 };
 
-export const Factory = ( { children, ...args } ) => (
-	<Link { ...args }>{ children }</Link>
-);
-Factory.parameters = {
-	controls: { disable: false },
-};
-Factory.args = {
-	children: "Link factory",
+export const Factory = {
+	parameters: {
+		controls: { disable: false },
+	},
+	args: {
+		children: "Link factory",
+	},
 };
 
 export const Anchor = {
-	component: Factory.bind( {} ),
 	parameters: {
 		docs: {
 			description: {
@@ -41,7 +39,6 @@ export const Anchor = {
 };
 
 export const Button = {
-	component: Factory.bind( {} ),
 	parameters: {
 		docs: {
 			description: {
@@ -70,7 +67,7 @@ export const Button = {
 };
 
 export const CustomComponent = {
-	component: Factory.bind( {} ),
+	name: "Custom component",
 	parameters: {
 		docs: {
 			description: {
@@ -92,5 +89,3 @@ export const CustomComponent = {
 		children: "component",
 	},
 };
-
-CustomComponent.storyName = "Custom component";

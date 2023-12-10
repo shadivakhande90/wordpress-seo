@@ -25,14 +25,13 @@ export default {
 	parameters: { docs: { description: { component } } },
 };
 
-export const Factory = ( { children, ...args } ) => (
-	<Button { ...args }>{ children }</Button>
-);
-Factory.parameters = {
-	controls: { disable: false },
-};
-Factory.args = {
-	children: "Button factory",
+export const Factory = {
+	parameters: {
+		controls: { disable: false },
+	},
+	args: {
+		children: "Button factory",
+	},
 };
 
 export const Variants = ( args ) => (

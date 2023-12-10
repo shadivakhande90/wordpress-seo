@@ -1,4 +1,3 @@
-import React from "react";
 import TextInput from ".";
 import { component } from "./docs";
 import { useState, useCallback } from "@wordpress/element";
@@ -16,7 +15,6 @@ export default {
 };
 
 export const Factory = {
-	component: ( args ) => <TextInput { ...args } />,
 	parameters: {
 		controls: { disable: false },
 	},
