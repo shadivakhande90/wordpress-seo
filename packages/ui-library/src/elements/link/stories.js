@@ -1,10 +1,10 @@
 import React from "react";
-import { StoryComponent } from ".";
+import Link from ".";
 import { anchor, button, component, customComponent } from "./docs";
 
 export default {
 	title: "1) Elements/Link",
-	component: StoryComponent,
+	component: Link,
 	argTypes: {
 		children: { control: "text" },
 		as: { options: [ "a", "button" ] },
@@ -14,7 +14,7 @@ export default {
 };
 
 export const Factory = ( { children, ...args } ) => (
-	<StoryComponent { ...args }>{ children }</StoryComponent>
+	<Link { ...args }>{ children }</Link>
 );
 Factory.parameters = {
 	controls: { disable: false },

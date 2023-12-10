@@ -33,15 +33,13 @@ const TextInput = forwardRef( ( {
 	/>
 ) );
 
-const propTypes = {
+TextInput.displayName = "TextInput";
+TextInput.propTypes = {
 	type: PropTypes.string,
 	className: PropTypes.string,
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
 };
-
-TextInput.displayName = "TextInput";
-TextInput.propTypes = propTypes;
 TextInput.defaultProps = {
 	type: "text",
 	className: "",
@@ -50,9 +48,3 @@ TextInput.defaultProps = {
 };
 
 export default TextInput;
-
-// eslint-disable-next-line require-jsdoc
-export const StoryComponent = props => <TextInput { ...props } />;
-StoryComponent.propTypes = propTypes;
-StoryComponent.defaultProps = TextInput.defaultProps;
-StoryComponent.displayName = "TextInput";

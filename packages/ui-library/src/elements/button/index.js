@@ -61,7 +61,8 @@ const Button = forwardRef( ( {
 	</Component>
 ) );
 
-const propTypes = {
+Button.displayName = "Button";
+Button.propTypes = {
 	children: PropTypes.node.isRequired,
 	as: PropTypes.elementType,
 	type: PropTypes.oneOf( [ "button", "submit" ] ),
@@ -71,9 +72,6 @@ const propTypes = {
 	disabled: PropTypes.bool,
 	className: PropTypes.string,
 };
-
-Button.displayName = "Button";
-Button.propTypes = propTypes;
 Button.defaultProps = {
 	as: "button",
 	// eslint-disable-next-line no-undefined
@@ -86,9 +84,3 @@ Button.defaultProps = {
 };
 
 export default Button;
-
-// eslint-disable-next-line require-jsdoc
-export const StoryComponent = props => <Button { ...props } />;
-StoryComponent.propTypes = propTypes;
-StoryComponent.defaultProps = Button.defaultProps;
-StoryComponent.displayName = "Button";
