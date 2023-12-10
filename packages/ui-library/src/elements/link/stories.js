@@ -47,16 +47,18 @@ export const Button = {
 			description: {
 				story: button,
 			},
-			transformSource: () => (
-				"const handleClick = () => alert( \"You clicked the button!\" )" +
-				"\n\n" +
-				"<Link\n" +
-				"  as=\"button\"\n" +
-				"  onClick={ handleClick }\n" +
-				">\n" +
-				"  Button\n" +
-				"</Link>"
-			),
+			source: {
+				transform: () => (
+					"const handleClick = () => alert( \"You clicked the button!\" )" +
+					"\n\n" +
+					"<Link\n" +
+					"  as=\"button\"\n" +
+					"  onClick={ handleClick }\n" +
+					">\n" +
+					"  Button\n" +
+					"</Link>"
+				),
+			},
 		},
 	},
 	args: {
@@ -74,13 +76,15 @@ export const CustomComponent = {
 			description: {
 				story: customComponent,
 			},
-			transformSource: () => (
-				"const Component = ( { className, children } ) => <span className={ className }>Custom { children }</span>" +
-				"\n\n" +
-				"<Link as={ Component }>\n" +
-				"  component\n" +
-				"</Link>"
-			),
+			source: {
+				transform: () => (
+					"const Component = ( { className, children } ) => <span className={ className }>Custom { children }</span>" +
+					"\n\n" +
+					"<Link as={ Component }>\n" +
+					"  component\n" +
+					"</Link>"
+				),
+			},
 		},
 	},
 	args: {
