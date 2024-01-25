@@ -21,7 +21,8 @@ const TextInput = forwardRef( ( {
 		ref={ ref }
 		type={ type }
 		className={ classNames(
-			! props?.value && "yst-text-input--empty",
+			// eslint-disable-next-line react/prop-types
+			( ! props?.value && ! props?.defaultValue ) && "yst-text-input--empty",
 			"yst-text-input",
 			disabled && "yst-text-input--disabled",
 			readOnly && "yst-text-input--read-only",
