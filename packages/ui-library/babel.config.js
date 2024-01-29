@@ -1,12 +1,12 @@
 module.exports = ( api ) => {
-	api.cache( true );
+	api.cache.using( () => process.env.NODE_ENV === "test" );
 
 	return {
 		presets: [
 			[
 				"@babel/preset-env",
 				{
-					modules: false,
+					modules: api.env( "test" ) ? "auto" : false,
 				},
 			],
 			"@babel/preset-react",
