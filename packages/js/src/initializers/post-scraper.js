@@ -49,7 +49,6 @@ import { actions } from "@yoast/externals/redux";
 
 // Helper dependencies.
 import isBlockEditor from "../helpers/isBlockEditor";
-import { getFocusKeyphrase } from "../redux/selectors/focusKeyPhrase.js";
 
 const {
 	setFocusKeyword,
@@ -158,7 +157,7 @@ export default function initPostScraper( $, store, editorData ) {
 	 * @returns {void}
 	 */
 	function initializeKeywordAnalysis( activePublishBox ) {
-		const savedKeywordScore = $( "#yoast_wpseo_linkdex" ).val();
+		const savedKeywordScore = get( window, "wpseoScriptData.metabox.metaData.linkdex", 0 );
 
 		const indicator = getIndicatorForScore( savedKeywordScore );
 
@@ -176,7 +175,7 @@ export default function initPostScraper( $, store, editorData ) {
 	 * @returns {void}
 	 */
 	function initializeContentAnalysis( activePublishBox ) {
-		const savedContentScore = $( "#yoast_wpseo_content_score" ).val();
+		const savedContentScore = get( window, "wpseoScriptData.metabox.metaData.content_score", 0 );
 
 		const indicator = getIndicatorForScore( savedContentScore );
 
@@ -193,7 +192,7 @@ export default function initPostScraper( $, store, editorData ) {
 	 * @returns {void}
 	 */
 	function initializeInclusiveLanguageAnalysis( activePublishBox ) {
-		const savedContentScore = $( "#yoast_wpseo_inclusive_language_score" ).val();
+		const savedContentScore = get( window, "wpseoScriptData.metabox.metaData.inclusive_language_score", 0 );
 
 		const indicator = getIndicatorForScore( savedContentScore );
 
@@ -434,8 +433,10 @@ export default function initPostScraper( $, store, editorData ) {
 
 		handlePageBuilderCompatibility();
 
+		const metaData = get( window, "wpseoScriptData.metabox.metaData", [] );
+
 		// Avoid error when snippet metabox is not rendered.
-		if ( metaboxContainer.length === 0 ) {
+		if ( metaboxContainer.length === 0 && metaData.length === 0 ) {
 			return;
 		}
 
