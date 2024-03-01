@@ -1,4 +1,4 @@
-import { AdjustmentsIcon, ColorSwatchIcon, DesktopComputerIcon, NewspaperIcon } from "@heroicons/react/outline";
+import { AdjustmentsIcon, ColorSwatchIcon, DesktopComputerIcon, HomeIcon, NewspaperIcon, UserIcon } from "@heroicons/react/outline";
 import SidebarNavigation from ".";
 import Table from "../../elements/table";
 
@@ -169,6 +169,40 @@ Sidebar.args = {
 				<SidebarNavigation.SubmenuItem to="#3" label="SubmenuItem 3" />
 
 			</SidebarNavigation.MenuItem>
+		</SidebarNavigation.Sidebar>
+	),
+};
+
+
+export const TopLevelLinks = Template.bind( {} );
+TopLevelLinks.storyName = "Menu items without a group";
+TopLevelLinks.parameters = { docs: { description: { story: "The `SidebarNavigation.Sidebar` accepts any kind of children. This examples shows it containing a `<ul>` with instances of `SidebarNavigation.SubmenuItem` as children next to a `SidebarNavigation.MenuItem` group. " } } };
+
+const iconClassName = "yst-flex-shrink-0 yst--ml-1 yst-mr-3 yst-h-6 yst-w-6 yst-text-slate-400 group-hover:yst-text-slate-500";
+function ItemWithHomeIcon( { children, ...props } ) {
+	return ( <a { ...props }><HomeIcon className={ iconClassName } />{ children }</a> );
+}
+function ItemWithSettingsIcon( { children, ...props } ) {
+	return ( <a { ...props }><AdjustmentsIcon className={ iconClassName } />{ children }</a> );
+}
+
+TopLevelLinks.args = {
+	children: (
+		<SidebarNavigation.Sidebar className="yst-w-1/3">
+			<ul>
+				<SidebarNavigation.SubmenuItem as={ ItemWithHomeIcon } href="#_home" label="Home" />
+				<SidebarNavigation.SubmenuItem as={ ItemWithSettingsIcon } href="#_settings" label="Settings" />
+				<li>
+					<SidebarNavigation.MenuItem
+						id="submenuitem-sidebar-2"
+						icon={ UserIcon }
+						label="Profile"
+					>
+						<SidebarNavigation.SubmenuItem href="#_subscriptions" label="Subscriptions" />
+						<SidebarNavigation.SubmenuItem href="#_logout" label="Log out" />
+					</SidebarNavigation.MenuItem>
+				</li>
+			</ul>
 		</SidebarNavigation.Sidebar>
 	),
 };
